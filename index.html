@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Sound Mood Map</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="style.css" />
+</head>
+ <button id="scroll-Top" class="scroll-top">
+    Scroll top ↑
+</button>
+<body>
+
+<!-- HEADER -->
+<header class="site-header">
+  <div class="header-left">
+    <h2 class="name">Divya Gupta</h2>
+    <p class="title">Student | Exploring Systems and Web-designs</p>
+  </div>
+  <button id="themeToggle" class="theme-toggle">
+    🌙
+</button>
+
+</header>
+
+<!-- LAYOUT -->
+<div class="layout">
+
+  <!-- SIDEBAR -->
+  <nav class="sidebar">
+    <ul>
+      <li><a href="#sound-map">Sound Map</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact Me</a></li>
+    </ul>
+  </nav>
+
+  <!-- MAIN CONTENT -->
+  <main class="main-content">
+
+  <!--TITLE-->
+   <section id="sound-map" class="sound-map-section max-w-5xl mx-auto px-10 py-12 fade-anime">
+        <h1 class="text-5xl font-semibold leading-relaxed">
+             I don’t remember the days...
+             I remember how they sounded
+        </h1>
+        <p class="text-2xl mt-6 text-neutral-500">
+         A personal collection of my moods, moments, and music.
+        </p>
+    </section>
+        <section class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto px-6 pb-24 fade-anime">
+
+
+            <!--FIRST-->
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                <!--front1-->
+                    <div class="card-front">
+                    <h3 class="text-xl font-medium text-neutral-650">Calm</h3>
+                        <iframe
+                            class="mt-4 rounded"
+                            src="https://open.spotify.com/embed/track/3hB9lDLyAClYVZivMMl20N?utm_source=generator"
+                            width="280"
+                            height="100"
+                            frameborder="0"
+                            allow="encrypted-media">
+                        </iframe>
+                    <p class="click-flip">Click to flip</p>
+                    </div>
+
+                <!--back1-->
+                    <div class="card-back">
+                    <h3 class="text-xl font-medium mb-2 text-neutral-650 leading-relaxed">Evenings Alone</h3>
+                    <p class="text-sm leading-relaxed"> Soft sounds, low volume. Music that sits quietly instead of filling the room.</p>
+                    </div>   
+                </div>  
+            </div> 
+
+
+            <!--SECOND-->
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+                <!--front2-->
+                    <div class="card-front">
+                    <h3 class="text-xl font-medium text-neutral-650">Focus</h3>
+                        <iframe
+                            class="mt-4 rounded"
+                            src="https://open.spotify.com/embed/track/6GGtHZgBycCgGBUhZo81xe?utm_source=generator" 
+                            width="280"
+                            height="100"
+                            frameborder="0"
+                            allow="encrypted-media">
+                        </iframe>
+                    </div>
+
+                <!--back2-->
+                    <div class="card-back">
+                    <h3 class="text-xl font-medium mb-2 text-neutral-650 leading-relaxed">Late Night Studying</h3>
+                    <p class="text-sm leading-relaxed"> Serene rhythm. Enough to block noise and engage the thoughts.</p>
+                    </div>   
+                </div>  
+            </div>
+
+
+        <!--THIRD-->
+        <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+
+
+                <!--front3-->
+                    <div class="card-front">
+                    <h3 class="text-xl font-medium text-neutral-650">Energy</h3>
+                        <iframe
+                            class="mt-4 rounded"
+                            src="https://open.spotify.com/embed/track/0cYohCh24y1aMjJmcS9RBl?utm_source=generator"
+                            width="280"
+                            height="100"
+                            frameborder="0"
+                            allow="encrypted-media">
+                        </iframe>
+                    </div>
+
+                <!--back3-->
+                    <div class="card-back">
+                    <h3 class="text-xl font-medium mb-2 text-neutral-650 leading-relaxed">Walking Between Classes</h3>
+                    <p class="text-sm leading-relaxed">Fast beats, familiar tracks. Keeps momentum when motivation dips.</p>
+                    </div>   
+                </div>  
+            </div> 
+
+
+        <!--FOURTH-->
+        <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+
+
+                <!--front4-->
+                    <div class="card-front">
+                    <h3 class="text-xl font-medium text-neutral-650">Drive</h3>
+                        <iframe
+                            class="mt-4 rounded"
+                            src="https://open.spotify.com/embed/track/5gOnY5HODxz1b28te8eSAF?utm_source=generator" 
+                            width="280"
+                            height="100"
+                            frameborder="0"
+                            allow="encrypted-media">
+                        </iframe>
+                    </div>
+
+                <!--back4-->
+                    <div class="card-back">
+                    <h3 class="text-xl font-medium mb-2 text-neutral-650 leading-relaxed">Pushing Forward</h3>
+                    <p class="text-sm leading-relaxed">Fast raps, not calm, not careful — just movement in the right direction.</p>
+                    </div>   
+                </div>  
+            </div> 
+
+
+        <!--FIFTH-->
+            <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+
+
+                <!--front5-->
+                    <div class="card-front">
+                    <h3 class="text-xl font-medium text-neutral-650">Chaos</h3>
+                        <iframe
+                            class="mt-4 rounded"
+                            src="https://open.spotify.com/embed/track/0ON0JdGgRTVcCInt8j6eod?utm_source=generator" 
+                            width="280"
+                            height="100"
+                            frameborder="0"
+                            allow="encrypted-media">
+                        </iframe>
+                    </div>
+
+                <!--back5-->
+                    <div class="card-back">
+                    <h3 class="text-xl font-medium mb-2 text-neutral-650 leading-relaxed">Shared Evenings</h3>
+                    <p class="text-sm leading-relaxed">Music passed around and songs half-finished, It’s less about what’s playing and more about who’s there.</p>
+                    </div>   
+                </div>  
+            </div> 
+
+        
+
+        <!--SIXTH-->
+        <div class="card" onclick="flipCard(this)">
+                <div class="card-inner">
+
+
+                <!--front6-->
+                    <div class="card-front">
+                    <h3 class="text-xl font-medium text-neutral-650">Wander</h3>
+                        <iframe
+                            class="mt-4 rounded"
+                            src="https://open.spotify.com/embed/track/3uUAbrwsttRpv2kfAvAUN9?utm_source=generator"
+                            width="280"
+                            height="100"
+                            frameborder="0"
+                            allow="encrypted-media">
+                        </iframe>
+                    </div>
+
+                <!--back6-->
+                    <div class="card-back">
+                    <h3 class="text-xl font-medium mb-2 text-neutral-650 leading-relaxed">Bus Rides</h3>
+                    <p class="text-sm leading-relaxed">Music fades into the background and my mind is at peace</p>
+                    </div>   
+                </div>  
+            </div> 
+        </section>
+
+
+        <!--ABOUTME-->
+            <section id="about" class="about-section fade-anime">
+            <h2>About Me</h2>
+
+            <p>
+                I am a student who enjoys building and exploring new things with a thoughtful approach.
+                I’m currently exploring web development, focusing on structure, interaction, and clarity
+                rather than complexity.
+            </p>
+
+            <p>
+                This site is a small reflection of how I think about design — calm, functional, and personal.
+                I’m currently learning front-end development (HTML, CSS, JavaScript) and back-end development (C++ and Python)
+            </p>
+            </section>
+
+
+        <!--CONTACT-->
+            <section id="contact" class="contact-section fade-anime">
+            <h2>Contact</h2>
+
+            <p class="contact-intro">
+                If you’d like to connect, collaborate, or have a conversation,
+                you can reach me here.
+            </p>
+
+            <div class="contact-links">
+                <p class="email">
+                <span>Email:</span>
+                <a href="mailto:divyagupta14may@gmail.com">
+                    divyagupta14may@gmail.com
+                </a>
+                </p>
+
+                <p class="github">
+                <span>GitHub:</span>
+                <a href="https://github.com/Divya1457" target="_blank">
+                    github.com/Divya1457
+                </a>
+                </p>
+
+                <p class="linkedin">
+                <span>LinkedIn:</span>
+                <a href="https://linkedin.com/in/divya-gupta-d1457" target="_blank">
+                    linkedin.com/in/divya-gupta-d1457
+                </a>
+                </p>
+            </div>
+            </section>
+            <footer class="page-footer">
+                <p class="footer-line">Designed & built by Divya Gupta</p>
+            </footer>
+
+            </main>
+        <script src="script.js"></script>
+    </body>
+</html>
