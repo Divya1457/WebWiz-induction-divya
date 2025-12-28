@@ -336,3 +336,29 @@ body::before {
     transform: translate(-5%, -8%);
   }
 }
+/* ===== MOBILE FIXES ===== */
+@media (max-width: 768px) {
+
+  .layout {
+    flex-direction: column;
+  }
+
+  .sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+    margin: 1rem 0;
+    padding: 1.5rem;
+    flex-direction: row;
+  }
+
+  .sidebar ul {
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .sidebar li {
+    margin-bottom: 0;
+  }
+}
