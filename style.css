@@ -336,7 +336,7 @@ body::before {
     transform: translate(-5%, -8%);
   }
 }
-/* ===== MOBILE FIXES ===== */
+/* ===== SMALL SCREEN ===== */
 @media (max-width: 768px) {
 
   .layout {
@@ -362,3 +362,22 @@ body::before {
     margin-bottom: 0;
   }
 }
+@media (max-width: 768px) {
+
+  .main-content {
+    padding: 1rem 1.25rem;
+    margin-left: 0;
+  }
+
+  .about-section,
+  .contact-section {
+    padding: 2rem 1.5rem;
+    margin: 2rem 1rem;
+  }
+
+  .site-header {
+    padding: 16px 20px;
+    margin: 1rem;
+  }
+}
+
