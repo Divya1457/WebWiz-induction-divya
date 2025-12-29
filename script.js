@@ -1,16 +1,16 @@
-/* ============DARK MODE============= */
+/* ==darkmode== */
 
 const themeToggle = document.getElementById("themeToggle");
 
 themeToggle.addEventListener("click", () => {
   document.body.classList.toggle("darkmode");
 });
-/* ============CARD FLIP============ */
+/* ==card-flip== */
 
 function flipCard(card) {
   card.classList.toggle("flipped");
 }
-/* ============FADE ANIMATION============ */
+/* ==FADE ANIMATION== */
 const observer = new IntersectionObserver(entries => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -23,18 +23,17 @@ document.querySelectorAll(".fade-anime").forEach(el => {
   observer.observe(el);
 });
 
-/* ============SCROLL TO THE TOP============ */
-const scrollBtn = document.getElementById("scroll-Top");
+/* ==scroll to top of page== */
+const scrollbutton = document.getElementById("scroll-top");
 
 window.addEventListener("scroll", () => {
   if (window.scrollY > 400) {
-    scrollBtn.classList.add("show");
+    scrollbutton.classList.add("show");
   } else {
-    scrollBtn.classList.remove("show");
+    scrollbutton.classList.remove("show");
   }
 });
 
-scrollBtn.addEventListener("click", () => {
+scrollbutton.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
-

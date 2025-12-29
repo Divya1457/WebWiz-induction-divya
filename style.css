@@ -1,73 +1,63 @@
 /* ===== CONTENT ===== */
 .main-content {
-  padding: 1.5rem 4rem;
-  margin-left: 1rem;
+  padding: 25px 65px;
 }
 #sound-map,
 #about,
 #contact{
-  margin-bottom: 6rem;
+  margin-bottom:75px;
 }
 section {
-  scroll-margin-top: 100px;
+  scroll-margin-top: 200px;
 }
 .site-header{
-    display: flex;
+    display:flex;
     justify-content: space-between;
-    align-items: center;
     max-width: 1400px;
-    margin: 1.5rem auto;
-    padding: 20px 40px;
-    background: rgba(231, 151, 188, 0.2);
-    backdrop-filter: blur(10px);
     box-shadow:0 10px 30px rgba(0,0,0,0.08);
-    border-radius: 20px;
-    position: sticky;
-    top: 20px;
-    z-index: 20;
+    border-radius:20px;
+    position:sticky;
+    margin: 25px;
+    padding:20px 30px;
+    background: rgba(231, 151, 188, 0.2);
+    top:20px;
+    z-index:10;
+    backdrop-filter: blur(10px);
 }
-.header-left .name{
+.header-name .name{
     font-size: larger;
-    font-weight: 600;
-    margin: 0;
+    font-weight:600;
 }
-.header-left .title{
+.header-name .desc{
     font-size: large;
-    font-weight: 400;
-    margin: 0;
+    font-weight:400;
 }
-.theme-toggle {
-  background: none;
-  border: none;
-  font-size: 1.2rem;
+.dark-toggle {
+  font-size: 20px;
   cursor: pointer;
-  margin: 0%;
 }
-/* ===== Scroll ===== */
+/* ===== Scroll button ===== */
 .scroll-top {
+  font-size: 15px;
   position: fixed;
+  border-radius: 50px;
   bottom: 50px; 
   right: 32px;
-  padding: 0.65rem 0.85rem;
-  border-radius: 999px;
-  background: rgba(108, 102, 102, 0.12);
-  backdrop-filter: blur(10px);
-  color: #000000;
-  font-size: 0.9rem;
-  border: none;
+  padding: 10px 15px;
+  background: rgba(115, 107, 107, 0.12);
+  color: black;
+  transition: opacity 0.4s ease, transform 0.4s ease;
+  z-index: 30;  
   cursor: pointer;
   opacity: 0;
-  transform: translateY(-8px);
-  pointer-events: none;
-  transition: opacity 0.3s ease, transform 0.3s ease;
-  z-index: 60;        
+  pointer-events: none;      
 }
 
 .scroll-top.show {
   opacity: 1;
   pointer-events: auto;
 }
-/* ===== Card ===== */
+/* ===== 6-cards ===== */
 .card {
   perspective: 5000px;
   cursor: pointer;
@@ -75,7 +65,7 @@ section {
 }
 .card:hover {
   transform: translateY(-6px);
-  box-shadow: 0 14px 40px rgba(0,0,0,0.08);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.08);
 }
 .card-inner {
   position: relative;
@@ -90,33 +80,28 @@ section {
 .click-flip{
   font-size: smaller;
   text-align: end;
-  color: #777;
+  color: grey;
   opacity: 0.8;
 }
 .card-front,
 .card-back {
   position: absolute;
   inset: 0;
+  background: white;
   backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
-  background: #ffffff;
-  border-radius: 1rem;
-  padding: 1.25rem;
+  border-radius: 15px;
+  padding: 20px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
 }
 
 .card-back {
   transform: rotateY(180deg);
 }
-.card:hover {
-  transform: translateY(-6px);
-  box-shadow: 0 14px 40px rgba(230, 228, 228, 0.1);
-}
-/* ===== Dark Mode ===== */
+/* ===== darkmode edits ===== */
 
 body.darkmode {
   background: #121212;
-  color: #eaeaea;
+  color:lightgrey;
 }
 
 body.darkmode .site-header {
@@ -125,31 +110,31 @@ body.darkmode .site-header {
   box-shadow: 0 10px 30px rgba(0,0,0,0.6);
 }
 
-body.darkmode .header-left .title {
-  color: #aaa;
+body.darkmode .header-name .desc {
+  color:lightgrey;
 }
 body.darkmode .card-front,
 body.darkmode .card-back {
   background: #1c1b1b;
-  color: #ffffff;
+  color: white;
 }
 body.darkmode .about-section{
-    color:#fbfafa;
+    color:white;
 }
 body.darkmode .about-section p{
-  color: #ffffff;
+  color: whitesmoke;
 }
 body.darkmode .contact-section{
-    color:#fbfafa;
+    color:white;
 }
 body.darkmode .contact-section p{
-  color: #ffffff;
+  color: whitesmoke;
 }
 body.darkmode .contact-section span{
-  color: #ffffff;
+  color: whitesmoke;
 }
 body.darkmode .sidebar a{
-  color: #ffffff;
+  color: white;
 }
 body.darkmode .sidebar {
   border-right: 1px solid #333;
@@ -157,86 +142,87 @@ body.darkmode .sidebar {
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.6);
 }
 body.darkmode .sidebar a.active {
-  color: #ffffff;
+  color:white;
 }
 body.darkmode .scroll-top {
   background: rgba(255, 255, 255, 0.12);
-  color: #fff;
+  color:white;
 }
 body.darkmode .footer-line {
-  color: #ffffff;
+  color:white;
 }
 
-/* ===== About Section ===== */
+/* ===== aboutme section ===== */
 
 .about-section { 
   background: rgba(237, 205, 152, 0.2);
   backdrop-filter: blur(14px);
-  border-radius: 24px;
-  padding: 3rem 3.5rem;
-  box-shadow: 0 20px 50px rgba(185, 150, 150, 0.06);
   border: 1px solid rgba(255, 200, 170, 0.25);
+  border-radius: 24px;
   max-width: 1100px;
-  margin: 4rem auto;
+  margin: 64px;
+  box-shadow: 0 20px 50px rgba(185, 150, 150, 0.06);
+  padding: 48px 56px;
+
 }
 
 .about-section h2 {
-  font-size: 1.6rem;
+  font-size: 25px;
   font-weight: 600;
-  margin-bottom: 1.5rem;
+  margin-bottom:25px;
 }
 
 .about-section p {
-  font-size: 1rem;
+  font-size: 16px;
   line-height: 1.8;
-  color: #555;
-  margin-bottom: 1.25rem;
+  color:grey;
+  margin-bottom: 20px;
 }
 
-/* ===== Contact Section ===== */
+/* ===== contact section ===== */
 
 .contact-section {
   background: rgba(237, 205, 152, 0.2);
   backdrop-filter: blur(14px);
   border-radius: 24px;
-  padding: 3rem 3.5rem;
+  padding: 48px 56px;
   box-shadow: 0 20px 50px rgba(185, 150, 150, 0.06);
   border: 1px solid rgba(255, 200, 170, 0.25);
   max-width: 1100px;
-  margin: 4rem auto;
+  margin:65px;
 }
 
 .contact-section h2 {
-  font-size: 1.6rem;
+  font-size: 25px;
   font-weight: 600;
-  margin-bottom: 1rem;
+  margin-bottom: 25px;
 }
 
 .contact-intro {
-  font-size: 0.95rem;
-  color: #555;
-  margin-bottom: 2rem;
+  font-size: 15px;
+  color:grey;
+  margin-bottom: 35px;
   line-height: 1.6;
 }
 
 .contact-links {
-  padding: 0;
-  margin: 0;
+  padding:0;
+  margin:0;
   }
 
 .contact-links span {
-  font-size: 0.9rem;
-  color: #777;
+  font-size:15px;
+  color:grey;
 }
 
 .contact-links{
   font-size: 0.95rem;
   text-decoration: none;
-  color: #777;
+  color: gray;
 }
 
 .contact-links .github{
-    color:#777;
+    color:gray;
 }
 
 .contact-links a:hover {
@@ -247,22 +233,22 @@ body.darkmode .footer-line {
   max-width: 1900px;
   margin: 0 auto;
 }
-/* =====  SIDE BAR ===== */
+/* ===== sidebar-nav ===== */
 .sidebar{
   display: flex;
   flex-direction: column;
+  background: rgba(231, 151, 188, 0.2);
+  backdrop-filter:blur(10px);
   justify-content: center;
   align-items: center;
   width: 220px;                 
-  margin-left: 2rem;    
-  padding: 3rem 2rem;
-  position: sticky;
+  margin-left:35px;    
   top: 25%;
   height:65vh;
-  background: rgba(231, 151, 188, 0.2);
-  backdrop-filter: blur(10px);
   box-shadow:0 10px 30px rgba(0,0,0,0.08);
   border-radius: 20px;
+  padding: 50px 35px;
+  position: sticky;
 }
 .sidebar ul{
   list-style:none;
@@ -270,32 +256,31 @@ body.darkmode .footer-line {
   margin: 0;
 }
 .sidebar li{
-  margin-bottom: 1.25rem;
+  margin-bottom:20px;
 }
 .sidebar a{
-  text-decoration: none;
-  color: #555;
-  font-size: 0.95rem;
+  color:rgb(88, 88, 88);
+  font-size:15px;
 }
 .sidebar a:hover {
-  color: #000;
+  color:black;
 }
 .sidebar a.active {
   font-weight: 600;
-  color: #000;
+  color:black;
 }
-/* =====  FADE ANIMATION ===== */
+/* ===== fade animation ===== */
 .fade-anime {
   opacity: 0;
   transform: translateY(40px);
-  transition: 1s ease;
+  transition: 0.85s ease;
 }
 
 .fade-anime.show {
   opacity: 1;
   transform: translateY(0);
 }
-/* =====  FOOTER ===== */
+/* =====  footer ===== */
 .page-footer{
     display: flex;
     justify-content:center;
@@ -320,8 +305,9 @@ body::before {
   inset: -20%;
   z-index: -1;
 
+/* =====  background ===== */
   background:
-    radial-gradient(circle at 20% 30%, rgba(255, 180, 120, 0.25), transparent 40%),
+    radial-gradient(circle at 20% 30%, rgba(255, 180, 120, 0.25), transparent 50%),
     radial-gradient(circle at 80% 70%, rgba(255, 120, 150, 0.2), transparent 45%),
     radial-gradient(circle at 50% 50%, rgba(255, 220, 150, 0.15), transparent 50%);
 
@@ -336,7 +322,7 @@ body::before {
     transform: translate(-5%, -8%);
   }
 }
-/* ===== SMALL SCREEN ===== */
+/* ===== phone-edits ===== */
 @media (max-width: 768px) {
 
   .layout {
